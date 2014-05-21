@@ -125,3 +125,13 @@ MyArray* myArray = DG_NEW_ARRAY(MyArray, size, arena)
 
 DG_DELETE_ARRAY(myArray, arena)
 ```
+
+Todo
+-------
+
+- A data-oriented scene graph.
+- Frustum and octree culling.
+- Complete implementation and usage of different memory allocators.
+- Implement parallel library such as Intel TBB.
+- Expand upon the entity system to include features such as messaging.
+- A fully-featured game demo.
