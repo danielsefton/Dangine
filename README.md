@@ -12,7 +12,7 @@ Setup
 4. Open scripts/VC2010/Dangine.sln
 5. If you have a different version of Visual Studio, you may need to convert the project
 6. Navigate to Project -> Properties -> Debugging -> Working Directory
-7. Set it to $(ProjectDir)\..\..\..\bin\$(Configuration)
+7. Set it to $(ProjectDir)/../../../bin/$(Configuration)
 8. Debug -> Start Debugging
 
 Usage
