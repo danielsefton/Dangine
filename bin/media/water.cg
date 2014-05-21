@@ -1,0 +1,61 @@
+float4x4 worldviewproj_matrix;
+float4x4 world_matrix;
+
+float4 surface_ambient_colour;
+float4 surface_diffuse_colour;
+float4 light_direction;
+
+struct VS_INPUT
+{
+	float4 Pos		: POSITION;
+	//float2 Tex		: TEXCOORD0;
+	float3 Normal		: NORMAL;
+};
+
+struct PS_INPUT
+{
+	float4 Pos		: POSITION;
+	//float2 Tex		: TEXCOORD0;
+	float3 Normal		: NORMAL;
+};
+
+texture2D g_texture0;
+
+sampler2D g_samTx = sampler_state
+{
+	Texture = < g_texture0 >;
+	//MinFilter = LINEAR;
+	//MagFilter = LINEAR;
+	//MipFilter = LINEAR;
+};
+
+PS_INPUT VsMain(VS_INPUT Input)
+{
+	PS_INPUT Output;
+	
+	//Input.Pos.xz *= 2.0;
+	Output.Pos = mul(Input.Pos, worldviewproj_matrix); // transform Position
+	Output.Normal = normalize(mul(Input.Normal, (float3x3)world_matrix));
+	
+	return Output;
+}
+
+float4 PsMain(PS_INPUT Input) : COLOR
+{
+	float lightIntensity = saturate(dot(Input.Normal, (float3)light_direction));
+	float4 color = saturate(surface_diffuse_colour * lightIntensity);
+	color.a = 0.2;
+	return color + surface_ambient_colour * color;
+}
+
+//
+// Effect
+//
+technique T0
+{
+    pass P0
+    {
+     	VertexShader = compile vs_3_0 VsMain();
+        PixelShader  = compile ps_3_0 PsMain();
+    }
+}

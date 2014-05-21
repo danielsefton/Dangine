@@ -1,0 +1,98 @@
+float4x4 worldviewproj_matrix;
+float4x4 world_matrix;
+
+float4 surface_ambient_colour;
+float4 surface_diffuse_colour;
+float4 light_direction;
+
+struct VS_INPUT
+{
+	float4 Pos		: POSITION;
+	float2 Tex		: TEXCOORD0;
+	float3 Normal		: NORMAL;
+	float3 Tangent		: TANGENT;
+	float3 Binormal		: BINORMAL;
+};
+
+struct PS_INPUT
+{
+	float4 Pos		: POSITION;
+	float2 Tex		: TEXCOORD0;
+	float3x3 WorldToTangentSpace : TEXCOORD1;
+};
+
+texture2D g_texture0;
+texture2D g_texture1;
+
+sampler2D g_samTx0 = sampler_state
+{
+	Texture = < g_texture0 >;
+	//MinFilter = LINEAR;
+	//MagFilter = LINEAR;
+	//MipFilter = LINEAR;
+};
+
+sampler2D g_samTx1 = sampler_state
+{
+	Texture = < g_texture1 >;
+	//MinFilter = LINEAR;
+	//MagFilter = LINEAR;
+	//MipFilter = LINEAR;
+};
+
+PS_INPUT VsMain(VS_INPUT Input)
+{
+	PS_INPUT Output;
+	
+	Output.Pos = mul(Input.Pos, worldviewproj_matrix); // transform Position
+	Output.Tex = Input.Tex;
+
+	Output.WorldToTangentSpace[0] = mul((float3x3)world_matrix, normalize(Input.Tangent));
+	Output.WorldToTangentSpace[1] = mul((float3x3)world_matrix, normalize(Input.Binormal));
+	Output.WorldToTangentSpace[2] = mul((float3x3)world_matrix, normalize(Input.Normal));
+	
+	return Output;
+}
+
+float4 PsMain(PS_INPUT Input) : COLOR
+{
+	// Normal map lighting
+	// Reference: http://www.rastertek.com/dx10tut20.html
+	float4 base = tex2D(g_samTx0, Input.Tex);
+	float4 bump = tex2D(g_samTx1, Input.Tex) * 2.0 - 1.0;
+
+	// Calculate the normal from the data in the bump map.
+	float3 bumpNormal = Input.WorldToTangentSpace[2] + bump.x * 
+		Input.WorldToTangentSpace[0] + bump.y * Input.WorldToTangentSpace[1];
+
+	// Normalize the resulting bump normal.
+	bumpNormal = normalize(bumpNormal);
+
+	// Calculate the amount of light on this pixel based on the bump map normal value.
+	float lightIntensity = saturate(dot(bumpNormal, light_direction));
+
+	// Determine the final diffuse color based on the diffuse color and the amount of light intensity.
+	float4 color = saturate(surface_diffuse_colour * lightIntensity);
+
+	// Combine the final bump light color with the texture color.
+	color = color * base + surface_ambient_colour * base;
+
+	return color;
+
+	//float lightIntensity = saturate(dot(Input.Normal, (float3)light_direction));
+	//float4 color = saturate(surface_diffuse_colour * lightIntensity);
+	//color.a = 1.0;
+	//return (color * base) + (surface_ambient_colour * base);
+}
+
+//
+// Effect
+//
+technique T0
+{
+    pass P0
+    {
+     	VertexShader = compile vs_3_0 VsMain();
+        PixelShader  = compile ps_3_0 PsMain();
+    }
+}

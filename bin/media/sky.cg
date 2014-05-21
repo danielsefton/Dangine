@@ -1,0 +1,69 @@
+float4x4 worldviewproj_matrix;
+float4x4 world_matrix;
+
+float4 surface_ambient_colour;
+float4 surface_diffuse_colour;
+float4 light_direction;
+float4 camera_position;
+float time;
+
+struct VS_INPUT
+{
+	float4 Pos		: POSITION;
+	float3 NoiseTexCoord	: TEXCOORD0;
+};
+
+struct PS_INPUT
+{
+	float4 Pos		: POSITION;
+	float3 NoiseTexCoord	: TEXCOORD0;
+};
+
+texture3D g_texture0;
+
+sampler3D g_samTx = sampler_state
+{
+	Texture = < g_texture0 >;
+	//MinFilter = LINEAR;
+	//MagFilter = LINEAR;
+	//MipFilter = LINEAR;
+};
+
+PS_INPUT VsMain(VS_INPUT Input)
+{
+	PS_INPUT Output;
+
+	Output.Pos = mul(float4(Input.Pos.xyz * 400 + camera_position, 1), worldviewproj_matrix);
+	Output.NoiseTexCoord = Input.Pos.xyz * 1.2;//0.03
+
+	return Output;
+}
+
+float4 PsMain(PS_INPUT Input) : COLOR
+{
+	// Calculate clouds
+	Input.NoiseTexCoord.xy += 0.052 * time;
+	Input.NoiseTexCoord.z += 0.022 * time;
+	float noisy = tex3D(g_samTx, Input.NoiseTexCoord).r;
+	float lrp = 3.0 * noisy + -1.0;
+
+	// Calculate sky
+	float4 color = float4(0.53, 0.8, 0.98, 1.0);
+	color = lerp(float4(1,1,1,1), color, saturate(lrp));
+	color *= light_direction.y;
+	color.a = 1.0;
+
+	return color;
+}
+
+//
+// Effect
+//
+technique T0
+{
+    pass P0
+    {
+     	VertexShader = compile vs_3_0 VsMain();
+        PixelShader  = compile ps_3_0 PsMain();
+    }
+}

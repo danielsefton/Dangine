@@ -1,0 +1,392 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\..\Engine\Util\Math\vmInclude.h">
+      <Filter>Engine\Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\mat_aos.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\quat_aos.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\vec_aos.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\vecidx_aos.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\vectormath_aos.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\boolInVec.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\sse\floatInVec.h">
+      <Filter>Engine\Util\Math\sse</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\scalar\mat_aos.h">
+      <Filter>Engine\Util\Math\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\scalar\quat_aos.h">
+      <Filter>Engine\Util\Math\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\scalar\vec_aos.h">
+      <Filter>Engine\Util\Math\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\scalar\vectormath_aos.h">
+      <Filter>Engine\Util\Math\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\scalar\boolInVec.h">
+      <Filter>Engine\Util\Math\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\scalar\floatInVec.h">
+      <Filter>Engine\Util\Math\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\Common.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Platform\Platform.h">
+      <Filter>Engine\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Platform\Prerequisites.h">
+      <Filter>Engine\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Platform\StableHeaders.h">
+      <Filter>Engine\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Platform\Config.h">
+      <Filter>Engine\Platform</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Input\Input.h">
+      <Filter>Engine\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\Timer.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Memory\Memory.h">
+      <Filter>Engine\Util\Memory</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Entity\Entity.h">
+      <Filter>Engine\Util\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Entity\Component.h">
+      <Filter>Engine\Util\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Entity\EntityManager.h">
+      <Filter>Engine\Util\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Components\Transform.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Entity\SystemManager.h">
+      <Filter>Engine\Util\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Entity\World.h">
+      <Filter>Engine\Util\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Systems\CameraSystem.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Systems\LightSystem.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Systems\MeshSystem.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Entity\System.h">
+      <Filter>Engine\Util\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Components\Mesh.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Components\Light.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Components\Camera.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Components\Sound.h">
+      <Filter>Engine\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Systems\SoundSystem.h">
+      <Filter>Engine\Systems</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\Win32Timer.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\Bitwise.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Graphics\RenderSystem.h">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Graphics\D3D9\RenderSystemD3D9.h">
+      <Filter>Engine\Graphics\D3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Graphics\D3D9\MappingsD3D9.h">
+      <Filter>Engine\Graphics\D3D9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\Assert.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\StringUtil.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\Log.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Helper\ConfigFile.h">
+      <Filter>Engine\Util\Helper</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Scene\Scene.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Scene\SceneManager.h">
+      <Filter>Engine\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXLogOutputStream.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXScene.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXWorld.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXActor.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXMappings.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXPointRenderable.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXRenderableBinding.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXRenderedActorBinding.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXEntityRenderable.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Util\Math\AxisAlignedBox.h">
+      <Filter>Engine\Util\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXGeometry.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXCooker.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Physics\PhysXStream.h">
+      <Filter>Engine\Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BenchmarkGame\Game.h">
+      <Filter>BenchmarkGame</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BenchmarkGame\Scenes\PlayScene.h">
+      <Filter>BenchmarkGame\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\BenchmarkGame\Scenes\MenuScene.h">
+      <Filter>BenchmarkGame\Scenes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Engine\Graphics\Material.h">
+      <Filter>Engine\Graphics</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Engine">
+      <UniqueIdentifier>{f08c4df6-cd10-48bc-880b-2cc1debb638d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util">
+      <UniqueIdentifier>{fb163590-55d6-4728-8967-8f64c64c2ecf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Math">
+      <UniqueIdentifier>{562f6380-4506-448e-854e-2ca591c7c3ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Math\sse">
+      <UniqueIdentifier>{604863d2-a0b7-472a-bb58-af99ed409206}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Math\scalar">
+      <UniqueIdentifier>{9f513b27-527f-448d-b48e-833f08d9522f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Helper">
+      <UniqueIdentifier>{88ae6ee3-ea64-4dde-a020-f8c76850d3bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Helper\src">
+      <UniqueIdentifier>{2271b21a-67ae-4225-9820-e2d9ae96faa8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Platform">
+      <UniqueIdentifier>{00b2b29b-c9ae-45c5-852c-a478c907f123}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Platform\src">
+      <UniqueIdentifier>{c9ef974c-ccf6-4353-a05d-28893ca2856b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Input">
+      <UniqueIdentifier>{db3df583-7261-4cf6-9b1b-e5d76057366b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Input\src">
+      <UniqueIdentifier>{cece7045-2e57-4223-8384-44a35b7f91f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{725249f9-761d-42c8-973e-a73ddb3b516c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Memory">
+      <UniqueIdentifier>{fa04c6a5-0ac7-440a-b072-e86aee867281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Entity">
+      <UniqueIdentifier>{e24922a0-73a7-4ea6-8f3c-c01a96a72b37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Entity\src">
+      <UniqueIdentifier>{d956e9a0-7834-4ad0-971b-850ce463ee9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Components">
+      <UniqueIdentifier>{2b5782e5-55e8-4923-8da2-f6974abfc20d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Systems">
+      <UniqueIdentifier>{09da6f06-0f29-4eeb-b7a0-0adbf504891c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Systems\src">
+      <UniqueIdentifier>{e2fbdc47-8d42-4bc1-9ac3-c902cf8703da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics">
+      <UniqueIdentifier>{bf75c669-bd21-42d0-9733-155efb469ce3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\src">
+      <UniqueIdentifier>{292d499b-6f43-460b-a128-ab7f44b07287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\D3D9">
+      <UniqueIdentifier>{a8a36208-86d1-415c-949a-14cc84a36ac4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Graphics\D3D9\src">
+      <UniqueIdentifier>{b28d2d02-93d1-4d4a-acf7-2eff8581ade9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene">
+      <UniqueIdentifier>{b88432e7-0f87-4a09-b426-9181f070a2c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Physics">
+      <UniqueIdentifier>{dbeca6d7-548b-4e6f-946f-bab0f59b2f45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Scene\src">
+      <UniqueIdentifier>{9f21d0a5-4943-469b-8d14-a93626edd0e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Physics\src">
+      <UniqueIdentifier>{96b9e633-3086-41ff-83bc-de1be34b393d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Engine\Util\Math\src">
+      <UniqueIdentifier>{784281bd-a75b-4700-ab96-97cb4a755299}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BenchmarkGame">
+      <UniqueIdentifier>{107e246c-3dfa-4c83-87a3-9e182b19296c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BenchmarkGame\Scenes">
+      <UniqueIdentifier>{467c7715-4eb0-46de-9f04-2c4b4f5fd8b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BenchmarkGame\Scenes\src">
+      <UniqueIdentifier>{dc5aef03-6e93-47aa-a329-6f48ffae2ff7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="BenchmarkGame\src">
+      <UniqueIdentifier>{6377d1c8-6126-4e71-b55b-d34536b8b1fb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Engine\Util\Helper\src\Win32Timer.cpp">
+      <Filter>Engine\Util\Helper\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Platform\src\StableHeaders.cpp">
+      <Filter>Engine\Platform\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Input\src\Input.cpp">
+      <Filter>Engine\Input\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Entity\src\Entity.cpp">
+      <Filter>Engine\Util\Entity\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Entity\src\EntityManager.cpp">
+      <Filter>Engine\Util\Entity\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Entity\src\SystemManager.cpp">
+      <Filter>Engine\Util\Entity\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Entity\src\World.cpp">
+      <Filter>Engine\Util\Entity\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Systems\src\CameraSystem.cpp">
+      <Filter>Engine\Systems\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Systems\src\MeshSystem.cpp">
+      <Filter>Engine\Systems\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Systems\src\LightSystem.cpp">
+      <Filter>Engine\Systems\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Entity\src\System.cpp">
+      <Filter>Engine\Util\Entity\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Systems\src\SoundSystem.cpp">
+      <Filter>Engine\Systems\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Graphics\src\RenderSystem.cpp">
+      <Filter>Engine\Graphics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Graphics\D3D9\src\RenderSystemD3D9.cpp">
+      <Filter>Engine\Graphics\D3D9\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Graphics\D3D9\src\MappingsD3D9.cpp">
+      <Filter>Engine\Graphics\D3D9\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Helper\src\Assert.cpp">
+      <Filter>Engine\Util\Helper\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Helper\src\StringUtil.cpp">
+      <Filter>Engine\Util\Helper\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Helper\src\ConfigFile.cpp">
+      <Filter>Engine\Util\Helper\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Scene\src\SceneManager.cpp">
+      <Filter>Engine\Scene\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Physics\src\PhysXScene.cpp">
+      <Filter>Engine\Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Physics\src\PhysXWorld.cpp">
+      <Filter>Engine\Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Physics\src\PhysXEntityRenderable.cpp">
+      <Filter>Engine\Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Physics\src\PhysXRenderedActorBinding.cpp">
+      <Filter>Engine\Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Util\Math\src\AxisAlignedBox.cpp">
+      <Filter>Engine\Util\Math\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Physics\src\PhysXCooker.cpp">
+      <Filter>Engine\Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Engine\Physics\src\PhysXStream.cpp">
+      <Filter>Engine\Physics\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\BenchmarkGame\Scenes\src\MenuScene.cpp">
+      <Filter>BenchmarkGame\Scenes\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\BenchmarkGame\Scenes\src\PlayScene.cpp">
+      <Filter>BenchmarkGame\Scenes\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\BenchmarkGame\src\Game.cpp">
+      <Filter>BenchmarkGame\src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\BenchmarkGame\src\main.cpp">
+      <Filter>BenchmarkGame\src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\Docs\CodeTemplate.txt">
+      <Filter>Docs</Filter>
+    </None>
+  </ItemGroup>
+</Project>
