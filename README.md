@@ -1,6 +1,4 @@
-Dangine
-
-=======
+Dangine=======
 
 
 Prerequisites
@@ -100,7 +98,7 @@ void Game::update()
 
 ### Memory System
 
-To use the memory system, here is an example of arena and area creation:
+Here is an example of arena and area creation:
 
 ```
 HeapArea heapArea(1024 * 16);
@@ -121,6 +119,8 @@ Array creation/deletion:
 
 ```
 MyArray* myArray = DG_NEW_ARRAY(MyArray, size, arena)
+
 // Manipulation
+
 DG_DELETE_ARRAY(myArray, arena)
 ```
