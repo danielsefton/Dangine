@@ -3,6 +3,14 @@ Dangine
 =======
 
 
+Prerequisites
+-------
+
+1. Windows
+2. Visual Studio 2010 or above
+3. [DirectX 9 SDK](http://www.microsoft.com/en-gb/download/details.aspx?id=6812)
+4. [http://www.nvidia.com/object/physx-9.13.0725-driver.html](PhysX System Software) (Optional)
+
 Setup
 -------
 
