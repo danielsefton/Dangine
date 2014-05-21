@@ -26,6 +26,8 @@ Setup
 Usage
 -------
 
+### Creation
+
 First we initialise the engine:
 
 ```
@@ -74,4 +76,51 @@ camera forward:
 
 ```
 mCameraSystem->moveForward(mWorld->getEntity(0), moveSpeed);
+```
+
+### Updating
+
+The update loop makes it easy to separate operations:
+
+```
+void Game::update()
+{
+	// 1) Update logic
+	_internalLogicLoop(getGameTime());
+
+	// 2) Update graphics
+	mCameraSystem->process();
+	mMeshSystem->process();
+	mLightSystem->process();
+
+	// 3) Update input
+	mInput->update();
+}
+```
+
+### Memory System
+
+To use the memory system, here is an example of arena and area creation:
+
+```
+HeapArea heapArea(1024 * 16);
+LinearArena arena(heapArea);
+```
+
+Object creation/deletion:
+
+```
+MyClass* myClass = DG_NEW(MyClass, arena)(params)
+
+// Manipulation
+
+DG_DELETE(myClass, arena);
+```
+
+Array creation/deletion:
+
+```
+MyArray* myArray = DG_NEW_ARRAY(MyArray, size, arena)
+// Manipulation
+DG_DELETE_ARRAY(myArray, arena)
 ```
