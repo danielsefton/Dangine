@@ -14,7 +14,7 @@ Setup
 -------
 
 1. Clone the repo
-2. Download the [Dependencies](https://dl.dropboxusercontent.com/u/31008648/Dependencies.zip) and copy the folder into the root
+2. Download the [Dependencies](https://dropbox.com/s/4egtsmsdph1f0av/Dangine-Dependencies.zip?dl=0) and copy the folder into the root
 3. Copy the DLLs from Dependencies/bin/Release and Dependencies/bin/Debug into bin/Release and bin/Debug respectively
 4. Open scripts/VC2010/Dangine.sln
 5. If you have a different version of Visual Studio, you may need to convert the project
